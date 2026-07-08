@@ -112,11 +112,12 @@
   }
   .footer a { color: var(--indigo); text-decoration: none; }
 
-  /* English is default; hide Chinese variants */
-  [data-lang-hans], [data-lang-hant] { display: none; }
-  html[lang="zh-Hans"] [data-lang-en], html[lang="zh-Hant"] [data-lang-en] { display: none; }
+  /* English is default; hide other variants */
+  [data-lang-hans], [data-lang-hant], [data-lang-ja] { display: none; }
+  html[lang="zh-Hans"] [data-lang-en], html[lang="zh-Hant"] [data-lang-en], html[lang="ja"] [data-lang-en] { display: none; }
   html[lang="zh-Hans"] [data-lang-hans] { display: block; }
   html[lang="zh-Hant"] [data-lang-hant] { display: block; }
+  html[lang="ja"] [data-lang-ja] { display: block; }
 </style>
 </head>
 <body>
@@ -124,6 +125,7 @@
     <button data-set="en" onclick="setLang('en')">EN</button>
     <button data-set="zh-Hans" onclick="setLang('zh-Hans')">简</button>
     <button data-set="zh-Hant" onclick="setLang('zh-Hant')">繁</button>
+    <button data-set="ja" onclick="setLang('ja')">日</button>
   </div>
 
   <div class="header">
@@ -132,6 +134,7 @@
     <p data-lang-en>Support Center</p>
     <p data-lang-hans>支持中心</p>
     <p data-lang-hant>支援中心</p>
+    <p data-lang-ja>サポートセンター</p>
   </div>
 
   <div class="container">
@@ -139,53 +142,65 @@
       <h2 data-lang-en>About</h2>
       <h2 data-lang-hans>关于</h2>
       <h2 data-lang-hant>關於</h2>
+      <h2 data-lang-ja>このアプリについて</h2>
       <p class="faq-a" data-lang-en>CalendarNotes is a simple, focused reminder app. Create date-based alarms with descriptions and weekly repeats, view them in a list or calendar, and get local notifications when events are due. Optionally sync across your Apple devices via iCloud.</p>
       <p class="faq-a" data-lang-en style="margin-top:12px;">Beautifully minimal and quietly delightful — it's arguably one of the cleanest, most charming reminder apps you'll find. No clutter, no learning curve, just a calm little companion that remembers what matters.</p>
       <p class="faq-a" data-lang-hans>CalendarNotes 是一款简洁专注的提醒应用。你可以创建带描述和每周重复的日期闹钟，在列表或日历中查看，并在事件到期时收到本地通知。还可选择通过 iCloud 在你的 Apple 设备间同步。</p>
       <p class="faq-a" data-lang-hans style="margin-top:12px;">简洁到极致，可爱到心里——它大概是目前市面上最清爽、最讨喜的提醒应用之一。没有繁杂的设置，没有学习成本，只是一个安静陪伴你、帮你记住每个重要时刻的小伙伴。</p>
       <p class="faq-a" data-lang-hant>CalendarNotes 是一款簡潔專注的提醒應用程式。你可以建立帶描述和每週重複的日期鬧鐘，在清單或行事曆中檢視，並在事件到期時收到本機通知。還可選擇透過 iCloud 在你的 Apple 裝置間同步。</p>
       <p class="faq-a" data-lang-hant style="margin-top:12px;">簡潔到極致，可愛到心裡——它大概是目前市面上最清爽、最討喜的提醒應用程式之一。沒有繁雜的設定，沒有學習成本，只是一個安靜陪伴你、幫你記住每個重要時刻的小夥伴。</p>
+      <p class="faq-a" data-lang-ja>CalendarNotes は、シンプルで使いやすいリマインダーアプリです。日付ごとにメモや毎週の繰り返しを設定でき、リストやカレンダーで確認、予定の時刻にはローカル通知でお知らせします。iCloud を使って Apple デバイス間で同期することもできます。</p>
+      <p class="faq-a" data-lang-ja style="margin-top:12px;">とことんミニマルで、そっと心地よい——おそらく最もすっきりして愛らしいリマインダーアプリのひとつです。ごちゃつきも学習コストもなく、大切なことを静かに覚えておいてくれる小さな相棒です。</p>
     </div>
 
     <div class="card">
       <h2 data-lang-en>Frequently Asked Questions</h2>
       <h2 data-lang-hans>常见问题</h2>
       <h2 data-lang-hant>常見問題</h2>
+      <h2 data-lang-ja>よくある質問</h2>
 
       <div class="faq-item">
         <div class="faq-q" data-lang-en>I'm not receiving notifications</div>
         <div class="faq-q" data-lang-hans>收不到通知怎么办？</div>
         <div class="faq-q" data-lang-hant>收不到通知怎麼辦？</div>
+        <div class="faq-q" data-lang-ja>通知が届きません</div>
         <div class="faq-a" data-lang-en>Go to Settings → Notifications → CalendarNotes and make sure notifications are allowed. Also check that Focus / Do Not Disturb is not blocking them.</div>
         <div class="faq-a" data-lang-hans>请前往 系统设置 → 通知 → CalendarNotes，确认已允许通知。同时检查专注模式 / 勿扰模式是否屏蔽了通知。</div>
         <div class="faq-a" data-lang-hant>請前往 系統設定 → 通知 → CalendarNotes，確認已允許通知。同時檢查專注模式 / 勿擾模式是否封鎖了通知。</div>
+        <div class="faq-a" data-lang-ja>「設定」→「通知」→「CalendarNotes」で通知が許可されているかご確認ください。また、集中モード / おやすみモードで通知がブロックされていないかもご確認ください。</div>
       </div>
 
       <div class="faq-item">
         <div class="faq-q" data-lang-en>How does iCloud Sync work?</div>
         <div class="faq-q" data-lang-hans>iCloud 同步如何使用？</div>
         <div class="faq-q" data-lang-hant>iCloud 同步如何使用？</div>
+        <div class="faq-q" data-lang-ja>iCloud 同期はどう使いますか？</div>
         <div class="faq-a" data-lang-en>After a one-time purchase, your reminders sync automatically across all devices signed in to the same iCloud account. Make sure iCloud Drive is enabled in your device settings.</div>
         <div class="faq-a" data-lang-hans>一次性购买后，你的提醒会在所有登录同一 iCloud 账户的设备间自动同步。请确保设备设置中已开启 iCloud Drive。</div>
         <div class="faq-a" data-lang-hant>一次性購買後，你的提醒會在所有登入同一 iCloud 帳戶的裝置間自動同步。請確保裝置設定中已開啟 iCloud 雲碟。</div>
+        <div class="faq-a" data-lang-ja>一度ご購入いただくと、同じ iCloud アカウントにサインインしているすべてのデバイスでリマインダーが自動的に同期されます。デバイスの設定で iCloud Drive が有効になっていることをご確認ください。</div>
       </div>
 
       <div class="faq-item">
         <div class="faq-q" data-lang-en>How do I restore my purchase?</div>
         <div class="faq-q" data-lang-hans>如何恢复购买？</div>
         <div class="faq-q" data-lang-hant>如何回復購買項目？</div>
+        <div class="faq-q" data-lang-ja>購入を復元するには？</div>
         <div class="faq-a" data-lang-en>Open Settings inside the app and tap "Restore Purchase". Your iCloud Sync unlock will be restored on any device signed in with your Apple ID.</div>
         <div class="faq-a" data-lang-hans>在 App 内打开「设置」，点击「恢复购买」。你的 iCloud 同步解锁会在任何登录你 Apple ID 的设备上恢复。</div>
         <div class="faq-a" data-lang-hant>在 App 內開啟「設定」，點按「回復購買項目」。你的 iCloud 同步解鎖會在任何登入你 Apple ID 的裝置上回復。</div>
+        <div class="faq-a" data-lang-ja>アプリ内の「設定」を開き、「購入を復元」をタップしてください。お使いの Apple ID でサインインしているデバイスで iCloud 同期のロック解除が復元されます。</div>
       </div>
 
       <div class="faq-item">
         <div class="faq-q" data-lang-en>Will my data be lost if I reinstall?</div>
         <div class="faq-q" data-lang-hans>重装后数据会丢失吗？</div>
         <div class="faq-q" data-lang-hant>重新安裝後資料會遺失嗎？</div>
+        <div class="faq-q" data-lang-ja>再インストールするとデータは消えますか？</div>
         <div class="faq-a" data-lang-en>If iCloud Sync is enabled, your data is restored automatically after reinstalling. Without it, data is stored only on the device.</div>
         <div class="faq-a" data-lang-hans>若已开启 iCloud 同步，重装后数据会自动恢复。未开启时，数据仅保存在本机。</div>
         <div class="faq-a" data-lang-hant>若已開啟 iCloud 同步，重新安裝後資料會自動回復。未開啟時，資料僅儲存在本機。</div>
+        <div class="faq-a" data-lang-ja>iCloud 同期が有効な場合、再インストール後もデータは自動的に復元されます。無効な場合、データはデバイス内にのみ保存されます。</div>
       </div>
     </div>
 
@@ -193,9 +208,11 @@
       <h2 data-lang-en>Contact Us</h2>
       <h2 data-lang-hans>联系我们</h2>
       <h2 data-lang-hant>聯絡我們</h2>
+      <h2 data-lang-ja>お問い合わせ</h2>
       <p class="faq-a" data-lang-en>Have a question or found a bug? We'd love to hear from you. We usually reply within 1–2 business days.</p>
       <p class="faq-a" data-lang-hans>有疑问或发现问题？欢迎联系我们，通常会在 1–2 个工作日内回复。</p>
       <p class="faq-a" data-lang-hant>有疑問或發現問題？歡迎聯絡我們，通常會在 1–2 個工作天內回覆。</p>
+      <p class="faq-a" data-lang-ja>ご質問や不具合のご報告はお気軽にどうぞ。通常 1〜2 営業日以内に返信いたします。</p>
       <a class="contact-btn" href="mailto:guozqzzu9@163.com">✉️ guozqzzu9@163.com</a>
     </div>
   </div>
@@ -206,6 +223,7 @@
       <a href="privacy.html" data-lang-en>Privacy Policy</a>
       <a href="privacy.html" data-lang-hans>隐私政策</a>
       <a href="privacy.html" data-lang-hant>隱私權政策</a>
+      <a href="privacy.html" data-lang-ja>プライバシーポリシー</a>
     </p>
   </div>
 
@@ -219,7 +237,9 @@
   (function () {
     var l = (navigator.language || '').toLowerCase();
     var initial = 'en';
-    if (/^zh/.test(l)) {
+    if (/^ja/.test(l)) {
+      initial = 'ja';
+    } else if (/^zh/.test(l)) {
       initial = /(hant|tw|hk|mo)/.test(l) ? 'zh-Hant' : 'zh-Hans';
     }
     setLang(initial);

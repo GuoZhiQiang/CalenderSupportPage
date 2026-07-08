@@ -95,13 +95,15 @@
     padding: 0 24px 40px;
   }
 
-  /* English is default; hide Chinese variants */
-  [data-lang-hans], [data-lang-hant] { display: none; }
-  html[lang="zh-Hans"] [data-lang-en], html[lang="zh-Hant"] [data-lang-en] { display: none; }
+  /* English is default; hide other variants */
+  [data-lang-hans], [data-lang-hant], [data-lang-ja] { display: none; }
+  html[lang="zh-Hans"] [data-lang-en], html[lang="zh-Hant"] [data-lang-en], html[lang="ja"] [data-lang-en] { display: none; }
   html[lang="zh-Hans"] [data-lang-hans] { display: block; }
   html[lang="zh-Hant"] [data-lang-hant] { display: block; }
+  html[lang="ja"] [data-lang-ja] { display: block; }
   html[lang="zh-Hans"] li[data-lang-hans] { display: list-item; }
   html[lang="zh-Hant"] li[data-lang-hant] { display: list-item; }
+  html[lang="ja"] li[data-lang-ja] { display: list-item; }
 </style>
 </head>
 <body>
@@ -109,15 +111,18 @@
     <button data-set="en" onclick="setLang('en')">EN</button>
     <button data-set="zh-Hans" onclick="setLang('zh-Hans')">简</button>
     <button data-set="zh-Hant" onclick="setLang('zh-Hant')">繁</button>
+    <button data-set="ja" onclick="setLang('ja')">日</button>
   </div>
 
   <div class="header">
     <h1 data-lang-en>Privacy Policy</h1>
     <h1 data-lang-hans>隐私政策</h1>
     <h1 data-lang-hant>隱私權政策</h1>
+    <h1 data-lang-ja>プライバシーポリシー</h1>
     <p data-lang-en>Last updated: July 8, 2026</p>
     <p data-lang-hans>最后更新：2026年7月8日</p>
     <p data-lang-hant>最後更新：2026年7月8日</p>
+    <p data-lang-ja>最終更新日：2026年7月8日</p>
   </div>
 
   <div class="container">
@@ -126,67 +131,85 @@
       <p data-lang-en>This Privacy Policy describes how CalendarNotes ("the App") handles your information. Your privacy matters to us, and we've designed the App to keep your data on your own devices.</p>
       <p data-lang-hans>本隐私政策说明 CalendarNotes（"本应用"）如何处理你的信息。我们重视你的隐私，并将应用设计为把你的数据保存在你自己的设备上。</p>
       <p data-lang-hant>本隱私權政策說明 CalendarNotes（「本應用程式」）如何處理你的資訊。我們重視你的隱私，並將應用程式設計為把你的資料儲存在你自己的裝置上。</p>
+      <p data-lang-ja>本プライバシーポリシーは、CalendarNotes（「本アプリ」）がお客様の情報をどのように取り扱うかを説明します。私たちはお客様のプライバシーを重視し、データがお客様ご自身のデバイスに保存されるよう本アプリを設計しています。</p>
 
       <h2 data-lang-en>Data We Collect</h2>
       <h2 data-lang-hans>我们收集的数据</h2>
       <h2 data-lang-hant>我們收集的資料</h2>
+      <h2 data-lang-ja>収集する情報</h2>
       <p data-lang-en><strong>We do not collect any personal data.</strong> The App does not have its own servers, does not use analytics or advertising SDKs, and the developer cannot access any of your information.</p>
       <p data-lang-hans><strong>我们不收集任何个人数据。</strong>本应用没有自己的服务器，不使用任何分析或广告 SDK，开发者无法访问你的任何信息。</p>
       <p data-lang-hant><strong>我們不收集任何個人資料。</strong>本應用程式沒有自己的伺服器，不使用任何分析或廣告 SDK，開發者無法存取你的任何資訊。</p>
+      <p data-lang-ja><strong>私たちは一切の個人情報を収集しません。</strong>本アプリは独自のサーバーを持たず、分析用や広告用の SDK も使用しておらず、開発者がお客様の情報にアクセスすることはできません。</p>
 
       <h2 data-lang-en>How Your Data Is Stored</h2>
       <h2 data-lang-hans>你的数据如何存储</h2>
       <h2 data-lang-hant>你的資料如何儲存</h2>
+      <h2 data-lang-ja>データの保存方法</h2>
       <ul>
         <li data-lang-en><strong>On your device:</strong> All reminders and settings you create are stored locally on your device.</li>
         <li data-lang-hans><strong>本机存储：</strong>你创建的所有提醒和设置都保存在你的设备本地。</li>
         <li data-lang-hant><strong>本機儲存：</strong>你建立的所有提醒和設定都儲存在你的裝置本機。</li>
+        <li data-lang-ja><strong>デバイス内：</strong>作成したすべてのリマインダーと設定は、お客様のデバイス内にローカル保存されます。</li>
         <li data-lang-en><strong>iCloud (optional):</strong> If you enable iCloud Sync, your reminders are stored in your personal iCloud account and synced across your Apple devices. This data is managed by Apple under Apple's privacy terms — we never see it.</li>
         <li data-lang-hans><strong>iCloud（可选）：</strong>若你开启 iCloud 同步，你的提醒会存储在你个人的 iCloud 账户中，并在你的 Apple 设备间同步。该数据由 Apple 根据其隐私条款管理——我们无法查看。</li>
         <li data-lang-hant><strong>iCloud（可選）：</strong>若你開啟 iCloud 同步，你的提醒會儲存在你個人的 iCloud 帳戶中，並在你的 Apple 裝置間同步。該資料由 Apple 根據其隱私條款管理——我們無法檢視。</li>
+        <li data-lang-ja><strong>iCloud（任意）：</strong>iCloud 同期を有効にすると、リマインダーはお客様個人の iCloud アカウントに保存され、Apple デバイス間で同期されます。このデータは Apple のプライバシー条項に基づき Apple が管理し、私たちが閲覧することはありません。</li>
       </ul>
 
       <h2 data-lang-en>Notifications</h2>
       <h2 data-lang-hans>通知</h2>
       <h2 data-lang-hant>通知</h2>
+      <h2 data-lang-ja>通知</h2>
       <p data-lang-en>The App uses local notifications to remind you of your events. These are scheduled entirely on your device and are not sent through any external server.</p>
       <p data-lang-hans>本应用使用本地通知来提醒你的事件。这些通知完全在你的设备上安排，不经过任何外部服务器。</p>
       <p data-lang-hant>本應用程式使用本機通知來提醒你的事件。這些通知完全在你的裝置上排程，不經過任何外部伺服器。</p>
+      <p data-lang-ja>本アプリは、予定をお知らせするためにローカル通知を使用します。これらの通知はすべてお客様のデバイス上でスケジュールされ、外部サーバーを経由して送信されることはありません。</p>
 
       <h2 data-lang-en>Purchases</h2>
       <h2 data-lang-hans>购买</h2>
       <h2 data-lang-hant>購買項目</h2>
+      <h2 data-lang-ja>購入について</h2>
       <p data-lang-en>iCloud Sync is unlocked via a one-time in-app purchase processed by Apple. All payment information is handled by Apple; we do not receive or store your payment details.</p>
       <p data-lang-hans>iCloud 同步通过 Apple 处理的一次性内购解锁。所有支付信息均由 Apple 处理；我们不会收到或存储你的支付详情。</p>
       <p data-lang-hant>iCloud 同步透過 Apple 處理的一次性 App 內購買解鎖。所有付款資訊均由 Apple 處理；我們不會收到或儲存你的付款詳情。</p>
+      <p data-lang-ja>iCloud 同期は、Apple が処理する一度限りの App 内課金によってロック解除されます。すべての支払い情報は Apple が取り扱い、私たちがお客様の支払い情報を受け取ったり保存したりすることはありません。</p>
 
       <h2 data-lang-en>Third Parties</h2>
       <h2 data-lang-hans>第三方</h2>
       <h2 data-lang-hant>第三方</h2>
+      <h2 data-lang-ja>第三者について</h2>
       <p data-lang-en>The App does not share data with any third parties. The only Apple services involved (iCloud, In-App Purchase) are governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
       <p data-lang-hans>本应用不会与任何第三方共享数据。所涉及的仅有的 Apple 服务（iCloud、内购）受 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a> 约束。</p>
       <p data-lang-hant>本應用程式不會與任何第三方共用資料。所涉及的僅有的 Apple 服務（iCloud、App 內購買）受 <a href="https://www.apple.com/legal/privacy/">Apple 隱私權政策</a> 約束。</p>
+      <p data-lang-ja>本アプリは、いかなる第三者ともデータを共有しません。関与する唯一の Apple サービス（iCloud、App 内課金）は <a href="https://www.apple.com/legal/privacy/">Apple のプライバシーポリシー</a> に従います。</p>
 
       <h2 data-lang-en>Children's Privacy</h2>
       <h2 data-lang-hans>儿童隐私</h2>
       <h2 data-lang-hant>兒童隱私</h2>
+      <h2 data-lang-ja>お子様のプライバシー</h2>
       <p data-lang-en>The App does not knowingly collect any information from children. Since we collect no data at all, the App is safe for users of all ages.</p>
       <p data-lang-hans>本应用不会有意收集任何儿童信息。由于我们完全不收集数据，本应用对所有年龄段用户都是安全的。</p>
       <p data-lang-hant>本應用程式不會有意收集任何兒童資訊。由於我們完全不收集資料，本應用程式對所有年齡層使用者都是安全的。</p>
+      <p data-lang-ja>本アプリは、お子様から意図的に情報を収集することはありません。一切のデータを収集しないため、本アプリはあらゆる年齢の方に安全にお使いいただけます。</p>
 
       <h2 data-lang-en>Changes to This Policy</h2>
       <h2 data-lang-hans>本政策的变更</h2>
       <h2 data-lang-hant>本政策的變更</h2>
+      <h2 data-lang-ja>本ポリシーの変更</h2>
       <p data-lang-en>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated date.</p>
       <p data-lang-hans>我们可能会不时更新本隐私政策。任何变更都会在此页面发布，并更新日期。</p>
       <p data-lang-hant>我們可能會不時更新本隱私權政策。任何變更都會在此頁面發佈，並更新日期。</p>
+      <p data-lang-ja>本プライバシーポリシーは、随時更新されることがあります。変更があった場合は、更新日とともにこのページに掲載します。</p>
 
       <h2 data-lang-en>Contact</h2>
       <h2 data-lang-hans>联系方式</h2>
       <h2 data-lang-hant>聯絡方式</h2>
+      <h2 data-lang-ja>お問い合わせ</h2>
       <p data-lang-en>If you have any questions about this Privacy Policy, contact us at <a href="mailto:guozqzzu9@163.com">guozqzzu9@163.com</a>.</p>
       <p data-lang-hans>如对本隐私政策有任何疑问，请联系 <a href="mailto:guozqzzu9@163.com">guozqzzu9@163.com</a>。</p>
       <p data-lang-hant>如對本隱私權政策有任何疑問，請聯絡 <a href="mailto:guozqzzu9@163.com">guozqzzu9@163.com</a>。</p>
+      <p data-lang-ja>本プライバシーポリシーに関するご質問は、<a href="mailto:guozqzzu9@163.com">guozqzzu9@163.com</a> までお問い合わせください。</p>
     </div>
   </div>
 
@@ -195,6 +218,7 @@
       <a href="index.html" data-lang-en>← Back to Support</a>
       <a href="index.html" data-lang-hans>← 返回支持页</a>
       <a href="index.html" data-lang-hant>← 返回支援頁</a>
+      <a href="index.html" data-lang-ja>← サポートに戻る</a>
     </p>
   </div>
 
@@ -208,7 +232,9 @@
   (function () {
     var l = (navigator.language || '').toLowerCase();
     var initial = 'en';
-    if (/^zh/.test(l)) {
+    if (/^ja/.test(l)) {
+      initial = 'ja';
+    } else if (/^zh/.test(l)) {
       initial = /(hant|tw|hk|mo)/.test(l) ? 'zh-Hant' : 'zh-Hans';
     }
     setLang(initial);
