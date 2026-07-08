@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CalendarNotes — Privacy Policy</title>
+<style>
+  :root {
+    --indigo: #5A52E0;
+    --indigo-dark: #8E2EC2;
+    --bg: #f5f5f7;
+    --card: #ffffff;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --border: #e5e5ea;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #000000;
+      --card: #1c1c1e;
+      --text: #f5f5f7;
+      --text-secondary: #98989d;
+      --border: #38383a;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .header {
+    background: linear-gradient(135deg, var(--indigo), var(--indigo-dark));
+    color: #fff;
+    padding: 56px 24px 40px;
+    text-align: center;
+  }
+  .header h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; }
+  .header p { font-size: 15px; opacity: 0.9; margin-top: 6px; }
+  .lang-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    z-index: 100;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+  .card {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 32px;
+    border: 1px solid var(--border);
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 28px 0 12px;
+    letter-spacing: -0.3px;
+  }
+  h2:first-child { margin-top: 0; }
+  p { color: var(--text-secondary); font-size: 16px; margin-bottom: 12px; }
+  ul { color: var(--text-secondary); font-size: 16px; margin: 0 0 12px 20px; }
+  li { margin-bottom: 6px; }
+  strong { color: var(--text); }
+  a { color: var(--indigo); text-decoration: none; }
+  .footer {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 14px;
+    padding: 0 24px 40px;
+  }
+  [data-lang-zh] { display: none; }
+  html[lang="zh"] [data-lang-en] { display: none; }
+  html[lang="zh"] [data-lang-zh] { display: block; }
+  html[lang="zh"] span[data-lang-zh] { display: inline; }
+  html[lang="zh"] li[data-lang-zh] { display: list-item; }
+</style>
+</head>
+<body>
+  <button class="lang-toggle" onclick="toggleLang()">
+    <span data-lang-en>中文</span><span data-lang-zh>English</span>
+  </button>
+
+  <div class="header">
+    <h1 data-lang-en>Privacy Policy</h1>
+    <h1 data-lang-zh>隐私政策</h1>
+    <p data-lang-en>Last updated: July 8, 2026</p>
+    <p data-lang-zh>最后更新：2026年7月8日</p>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <!-- Intro -->
+      <p data-lang-en>This Privacy Policy describes how CalendarNotes ("the App") handles your information. Your privacy matters to us, and we've designed the App to keep your data on your own devices.</p>
+      <p data-lang-zh>本隐私政策说明 CalendarNotes（"本应用"）如何处理你的信息。我们重视你的隐私，并将应用设计为把你的数据保存在你自己的设备上。</p>
+
+      <h2 data-lang-en>Data We Collect</h2>
+      <h2 data-lang-zh>我们收集的数据</h2>
+      <p data-lang-en><strong>We do not collect any personal data.</strong> The App does not have its own servers, does not use analytics or advertising SDKs, and the developer cannot access any of your information.</p>
+      <p data-lang-zh><strong>我们不收集任何个人数据。</strong>本应用没有自己的服务器，不使用任何分析或广告 SDK，开发者无法访问你的任何信息。</p>
+
+      <h2 data-lang-en>How Your Data Is Stored</h2>
+      <h2 data-lang-zh>你的数据如何存储</h2>
+      <ul>
+        <li data-lang-en><strong>On your device:</strong> All reminders and settings you create are stored locally on your device.</li>
+        <li data-lang-zh><strong>本机存储：</strong>你创建的所有提醒和设置都保存在你的设备本地。</li>
+        <li data-lang-en><strong>iCloud (optional):</strong> If you enable iCloud Sync, your reminders are stored in your personal iCloud account and synced across your Apple devices. This data is managed by Apple under Apple's privacy terms — we never see it.</li>
+        <li data-lang-zh><strong>iCloud（可选）：</strong>若你开启 iCloud 同步，你的提醒会存储在你个人的 iCloud 账户中，并在你的 Apple 设备间同步。该数据由 Apple 根据其隐私条款管理——我们无法查看。</li>
+      </ul>
+
+      <h2 data-lang-en>Notifications</h2>
+      <h2 data-lang-zh>通知</h2>
+      <p data-lang-en>The App uses local notifications to remind you of your events. These are scheduled entirely on your device and are not sent through any external server.</p>
+      <p data-lang-zh>本应用使用本地通知来提醒你的事件。这些通知完全在你的设备上安排，不经过任何外部服务器。</p>
+
+      <h2 data-lang-en>Purchases</h2>
+      <h2 data-lang-zh>购买</h2>
+      <p data-lang-en>iCloud Sync is unlocked via a one-time in-app purchase processed by Apple. All payment information is handled by Apple; we do not receive or store your payment details.</p>
+      <p data-lang-zh>iCloud 同步通过 Apple 处理的一次性内购解锁。所有支付信息均由 Apple 处理；我们不会收到或存储你的支付详情。</p>
+
+      <h2 data-lang-en>Third Parties</h2>
+      <h2 data-lang-zh>第三方</h2>
+      <p data-lang-en>The App does not share data with any third parties. The only Apple services involved (iCloud, In-App Purchase) are governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
+      <p data-lang-zh>本应用不会与任何第三方共享数据。所涉及的仅有的 Apple 服务（iCloud、内购）受 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a> 约束。</p>
+
+      <h2 data-lang-en>Children's Privacy</h2>
+      <h2 data-lang-zh>儿童隐私</h2>
+      <p data-lang-en>The App does not knowingly collect any information from children. Since we collect no data at all, the App is safe for users of all ages.</p>
+      <p data-lang-zh>本应用不会有意收集任何儿童信息。由于我们完全不收集数据，本应用对所有年龄段用户都是安全的。</p>
+
+      <h2 data-lang-en>Changes to This Policy</h2>
+      <h2 data-lang-zh>本政策的变更</h2>
+      <p data-lang-en>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated date.</p>
+      <p data-lang-zh>我们可能会不时更新本隐私政策。任何变更都会在此页面发布，并更新日期。</p>
+
+      <h2 data-lang-en>Contact</h2>
+      <h2 data-lang-zh>联系方式</h2>
+      <p data-lang-en>If you have any questions about this Privacy Policy, contact us at <a href="mailto:guozqzzu9@163.com">guozqzzu9@163.com</a>.</p>
+      <p data-lang-zh>如对本隐私政策有任何疑问，请联系 <a href="mailto:guozqzzu9@163.com">guozqzzu9@163.com</a>。</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p><a href="index.html" data-lang-en>← Back to Support</a><a href="index.html" data-lang-zh>← 返回支持页</a></p>
+  </div>
+
+<script>
+  function toggleLang() {
+    const html = document.documentElement;
+    html.lang = html.lang === 'zh' ? 'en' : 'zh';
+  }
+  if ((navigator.language || '').toLowerCase().startsWith('zh')) {
+    document.documentElement.lang = 'zh';
+  }
+</script>
+</body>
+</html>
